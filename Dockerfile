@@ -1,7 +1,7 @@
 # Docker file for the coffee ratings prediction project
 # Group 3: Michelle, Arlin, Kristen, Berkay
 
-# use rocker/tidyverse as the base image
+# Use of rocker/tidyverse as the base image
 FROM rocker/tidyverse@sha256:d0cd11790cc01deeb4b492fb1d4a4e0d5aa267b595fe686721cfc7c5e5e8a684
 
 # install R packages
@@ -14,7 +14,7 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
 # RUN apt-get install -y --no-install-recommends libxt6
 RUN apt-get install libxt6
 
-# install R packages using install.packages
+# Install R packages using install.packages
 RUN Rscript -e "install.packages('kableExtra')"
 RUN Rscript -e "install.packages('knitr')"
 RUN Rscript -e "install.packages('rmarkdown')"
